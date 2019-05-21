@@ -1,0 +1,166 @@
+load('WS N.mat');
+ben = SamplesNorm(SamplesNorm(:, classRow) == 2, :);
+partialBen = ben(1:length(mal(:, 1)), :);
+mal = SamplesNorm(SamplesNorm(:, classRow) == 4, :);
+
+%Analisis Clump Thickness (columna 1)
+%Plot 
+%Beningnos
+plot(partialBen(:, 1), 'Color', [0.0,0.0,0.9])%Azul
+hold on
+plot(partialBen(:, 1), 'O')
+%Malignos
+plot(mal(:, 1), 'Color', [0.9,0.0,0.0])%Rojo 
+plot(mal(:, 1), 'X')
+title('Clump Thickness')
+xlabel('Patients')
+ylabel('Thickness')
+
+%Promedios
+mediaBen_thickness = mean(ben(:, 1));
+mediaPartialBen_thickness = mean(partialBen(:, 1));
+mediaMal_thickness = mean(mal(:, 1));
+
+%Analisis Uniformity of Cell Size (columna 2)
+%Plot 
+%Beningnos
+plot(partialBen(:, 2), 'Color', [0.0,0.0,0.9])%Azul
+hold on
+plot(partialBen(:, 2), 'O')
+%Malignos
+plot(mal(:, 2), 'Color', [0.9,0.0,0.0])%Rojo 
+plot(mal(:, 2), 'X')
+title('Uniformity of Cell Size')
+xlabel('Patients')
+ylabel('Cell Size')
+
+%Promedios
+mediaBen_cellSize = mean(ben(:, 2));
+mediaPartialBen_cellSize = mean(partialBen(:, 2));
+mediaMal_cellSize = mean(mal(:, 2));
+
+%Analisis Uniformity of Cell Shape (columna 3)
+%Plot 
+%Beningnos
+plot(partialBen(:, 3), 'Color', [0.0,0.0,0.9])%Azul
+hold on
+plot(partialBen(:, 3), 'O')
+%Malignos
+plot(mal(:, 3), 'Color', [0.9,0.0,0.0])%Rojo 
+plot(mal(:, 3), 'X')
+title('Uniformity of Cell Shape')
+xlabel('Patients')
+ylabel('Cell Shape')
+
+%Promedios
+mediaBen_cellShape = mean(ben(:, 3));
+mediaPartialBen_cellShape = mean(partialBen(:, 3));
+mediaMal_cellShape = mean(mal(:, 3));
+
+%Analisis Marginal Adhesion (columna 4)
+%Plot 
+%Beningnos
+plot(partialBen(:, 4), 'Color', [0.0,0.0,0.9])%Azul
+hold on
+plot(partialBen(:, 4), 'O')
+%Malignos
+plot(mal(:, 4), 'Color', [0.9,0.0,0.0])%Rojo 
+plot(mal(:, 4), 'X')
+title('Marginal Adhesion')
+xlabel('Patients')
+ylabel('Adhesion')
+
+%Promedios
+mediaBen_adhesion = mean(ben(:, 4));
+mediaPartialBen_adhesion = mean(partialBen(:, 4));
+mediaMal_adhesion = mean(mal(:, 4));
+
+%Analisis Single Epithelial Cell Size (columna 5)
+%Plot 
+%Beningnos
+plot(partialBen(:, 5), 'Color', [0.0,0.0,0.9])%Azul
+hold on
+plot(partialBen(:, 5), 'O')
+%Malignos
+plot(mal(:, 5), 'Color', [0.9,0.0,0.0])%Rojo 
+plot(mal(:, 5), 'X')
+title('Single Epithelial Cell Size')
+xlabel('Patients')
+ylabel('Cell Size')
+
+%Promedios
+mediaBen_epithelial = mean(ben(:, 5));
+mediaPartialBen_epithelial = mean(partialBen(:, 5));
+mediaMal_epithelial = mean(mal(:, 5));
+
+%Analisis Bare Nuclei (columna 6)
+%Plot 
+%Beningnos
+plot(partialBen(:, 6), 'Color', [0.0,0.0,0.9])%Azul
+hold on
+plot(partialBen(:, 6), 'O')
+%Malignos
+plot(mal(:, 6), 'Color', [0.9,0.0,0.0])%Rojo 
+plot(mal(:, 6), 'X')
+title('Bare Nuclei')
+xlabel('Patients')
+ylabel('Bare Nuclei')
+
+%Promedios
+mediaBen_nuclei = mean(ben(:, 6));
+mediaPartialBen_nuclei = mean(partialBen(:, 6));
+mediaMal_nuclei = mean(mal(:, 6));
+
+%Analisis Bland Chromatin (columna 7)
+%Plot 
+%Beningnos
+plot(partialBen(:, 7), 'Color', [0.0,0.0,0.9])%Azul
+hold on
+plot(partialBen(:, 7), 'O')
+%Malignos
+plot(mal(:, 8), 'Color', [0.9,0.0,0.0])%Rojo 
+plot(mal(:, 7), 'X')
+title('Bland Chromatin')
+xlabel('Patients')
+ylabel('Chromatin')
+
+%Promedios
+mediaBen_chromatin = mean(ben(:, 7));
+mediaPartialBen_chromatin = mean(partialBen(:, 7));
+mediaMal_chromatin = mean(mal(:, 7));
+
+%Analisis Normal Nucleoli (columna 8)
+%Plot 
+%Beningnos
+plot(partialBen(:, 8), 'Color', [0.0,0.0,0.9])%Azul
+hold on
+plot(partialBen(:, 8), 'O')
+%Malignos
+plot(mal(:, 8), 'Color', [0.9,0.0,0.0])%Rojo 
+plot(mal(:, 8), 'X')
+title('Normal Nucleoli')
+xlabel('Patients')
+ylabel('Nucleoli')
+
+%Promedios
+mediaBen_nucleoli = mean(ben(:, 8));
+mediaPartialBen_nucleoli = mean(partialBen(:, 8));
+mediaMal_nucleoli = mean(mal(:, 8));
+
+%Analisis Mitoses (columna 9)
+%Plot 
+%Beningnos
+plot(partialBen(:, 9), 'Color', [0.0,0.0,0.9])%Azul
+hold on
+plot(partialBen(:, 9), 'O')
+%Malignos
+plot(mal(:, 9), 'Color', [0.9,0.0,0.0])%Rojo 
+plot(mal(:, 9), 'X')
+title('Mitoses')
+xlabel('Patients')
+ylabel('Mitoses')
+
+%Promedios
+mediaBen_mitoses = mean(ben(:, 9))
+mediaPartialBen_mitoses = mean(partialBen(:, 9));
+mediaMal_mitoses = mean(mal(:, 9))
